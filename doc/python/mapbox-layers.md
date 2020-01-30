@@ -5,17 +5,8 @@ jupyter:
     text_representation:
       extension: .md
       format_name: markdown
-<<<<<<< Updated upstream
-
       format_version: '1.2'
       jupytext_version: 1.3.2
-      format_version: "1.2"
-      jupytext_version: 1.3.1
-
-=======
-      format_version: '1.2'
-      jupytext_version: 1.3.0
->>>>>>> Stashed changes
   kernelspec:
     display_name: Python 3
     language: python
@@ -31,8 +22,7 @@ jupyter:
     pygments_lexer: ipython3
     version: 3.7.3
   plotly:
-    description:
-      How to make Mapbox maps in Python with various base layers, with
+    description: How to make Mapbox maps in Python with various base layers, with
       or without needing a Mapbox Access token.
     display_as: maps
     language: python
@@ -44,13 +34,6 @@ jupyter:
     thumbnail: thumbnail/mapbox-layers.png
 ---
 
-#### How Layers Work in Mapbox Maps
-<!-- #region -->
-<<<<<<< Updated upstream
-
-
-=======
->>>>>>> Stashed changes
 ### Mapbox Maps vs Geo Maps
 
 Plotly supports two different kinds of maps:
@@ -80,7 +63,6 @@ fig = px.scatter_mapbox(df, lat="centroid_lat", lon="centroid_lon",
 fig.show()
 ```
 
-<!-- #region -->
 #### Mapbox Access Tokens and When You Need Them
 
 The word "mapbox" in the trace names and `layout.mapbox` refers to the Mapbox.js open-source library, which is integrated into Plotly.py. If your basemap in `layout.mapbox.style` uses data from the Mapbox _service_, then you will need to register for a free account at https://mapbox.com/ and obtain a Mapbox Access token. This token should be provided in `layout.mapbox.access_token` (or, if using Plotly Express, via the `px.set_mapbox_access_token()` configuration function).
@@ -100,8 +82,6 @@ The accepted values for `layout.mapbox.style` are one of:
 #### OpenStreetMap tiles: no token needed
 
 Here is a simple map rendered with OpenStreetMaps tiles, without needing a Mapbox Access Token:
-
-<!-- #endregion -->
 
 ```python
 import pandas as pd
