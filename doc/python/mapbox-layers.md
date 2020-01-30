@@ -5,8 +5,17 @@ jupyter:
     text_representation:
       extension: .md
       format_name: markdown
+<<<<<<< Updated upstream
+
+      format_version: '1.2'
+      jupytext_version: 1.3.2
       format_version: "1.2"
       jupytext_version: 1.3.1
+
+=======
+      format_version: '1.2'
+      jupytext_version: 1.3.0
+>>>>>>> Stashed changes
   kernelspec:
     display_name: Python 3
     language: python
@@ -20,7 +29,7 @@ jupyter:
     name: python
     nbconvert_exporter: python
     pygments_lexer: ipython3
-    version: 3.6.8
+    version: 3.7.3
   plotly:
     description:
       How to make Mapbox maps in Python with various base layers, with
@@ -35,8 +44,13 @@ jupyter:
     thumbnail: thumbnail/mapbox-layers.png
 ---
 
+#### How Layers Work in Mapbox Maps
 <!-- #region -->
+<<<<<<< Updated upstream
 
+
+=======
+>>>>>>> Stashed changes
 ### Mapbox Maps vs Geo Maps
 
 Plotly supports two different kinds of maps:
@@ -54,6 +68,19 @@ Mapbox tile maps are composed of various layers, of three different types:
 2. The various traces in `data` are by default rendered above the base map (although this can be controlled via the `below` attribute).
 3. `layout.mapbox.layers` is an array that defines more layers that are by default rendered above the traces in `data` (although this can also be controlled via the `below` attribute).
 
+In order to add attribution information to charts, please use the [sourceattribution](https://plot.ly/python/reference/#layout-mapbox-layers-items-layer-sourceattribution), which allows you to display both mapbox [wordmark and text attribution](https://docs.mapbox.com/help/how-mapbox-works/attribution/) on maps, as shown is the example below:
+
+```python
+import plotly.express as px
+
+px.set_mapbox_access_token(open(".mapbox_token").read())
+df = px.data.carshare()
+fig = px.scatter_mapbox(df, lat="centroid_lat", lon="centroid_lon", 
+                        color="peak_hour", size="car_hours", zoom=10)
+fig.show()
+```
+
+<!-- #region -->
 #### Mapbox Access Tokens and When You Need Them
 
 The word "mapbox" in the trace names and `layout.mapbox` refers to the Mapbox.js open-source library, which is integrated into Plotly.py. If your basemap in `layout.mapbox.style` uses data from the Mapbox _service_, then you will need to register for a free account at https://mapbox.com/ and obtain a Mapbox Access token. This token should be provided in `layout.mapbox.access_token` (or, if using Plotly Express, via the `px.set_mapbox_access_token()` configuration function).
