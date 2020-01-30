@@ -5,12 +5,17 @@ jupyter:
     text_representation:
       extension: .md
       format_name: markdown
+<<<<<<< Updated upstream
 
       format_version: '1.2'
       jupytext_version: 1.3.2
       format_version: "1.2"
       jupytext_version: 1.3.1
 
+=======
+      format_version: '1.2'
+      jupytext_version: 1.3.0
+>>>>>>> Stashed changes
   kernelspec:
     display_name: Python 3
     language: python
@@ -41,8 +46,11 @@ jupyter:
 
 #### How Layers Work in Mapbox Maps
 <!-- #region -->
+<<<<<<< Updated upstream
 
 
+=======
+>>>>>>> Stashed changes
 ### Mapbox Maps vs Geo Maps
 
 Plotly supports two different kinds of maps:
@@ -108,7 +116,6 @@ fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
 fig.show()
 ```
 
-<!-- #region -->
 
 #### Using `layout.mapbox.layers` to Specify a Base Map
 
@@ -120,7 +127,6 @@ If you have access to your own private tile servers, or wish to use a tile serve
 
 Here is an example of a map which uses a public USGS imagery map, specified in `layout.mapbox.layers`, and which is rendered _below_ the `data` layer.
 
-<!-- #endregion -->
 
 ```python
 import pandas as pd
@@ -145,13 +151,11 @@ fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
 fig.show()
 ```
 
-<!-- #region -->
 
 #### Base Tiles from the USGS, radar overlay from Environment Canada: no token needed
 
 Here is the same example, with in addition, a WMS layer from Environment Canada which displays near-real-time radar imagery in partly-transparent raster tiles, rendered above the `go.Scattermapbox` trace, as is the default:
 
-<!-- #endregion -->
 
 ```python
 import pandas as pd
@@ -182,13 +186,11 @@ fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
 fig.show()
 ```
 
-<!-- #region -->
 
 #### Dark tiles from Mapbox service: free token needed
 
 Here is a map rendered with the `"dark"` style from the Mapbox service, which requires an Access Token:
 
-<!-- #endregion -->
 
 ```python
 token = open(".mapbox_token").read() # you will need your own token
